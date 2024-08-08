@@ -119,10 +119,14 @@ main {
 	display: flex;
 	flex-direction: column;
 
+	gap: 100px;
+}
+#quem-somos {
+	display: flex;
+	flex-direction: column;
 	gap: 20px;
 }
-
-#quem-somos {
+#container-quem-somos {
 	display: grid;
 	grid-template-columns: repeat(5, 1fr);
 	gap: 32px;
@@ -132,11 +136,11 @@ main {
 	padding: 0 80px;
 }
 
-#quem-somos h1 {
+#container-quem-somos h1 {
 	font-size: 80px;
 	grid-column: 3 span;
 }
-#quem-somos div {
+#container-quem-somos div {
 	grid-column: 2 span;
 }
 
@@ -252,22 +256,133 @@ main {
 
 	color: #d9d9d9;
 }
+h2 {
+	font-size: 60px;
+}
+h3 {
+	color: #96a0b5;
+}
+#servicos {
+	padding: 0 80px;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	gap: 20px;
+}
+#conheca {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	max-height: 500px;
+
+	gap: 20px;
+}
+.container-conheca {
+	max-height: 500px;
+}
+.maior {
+	grid-row: 2 span;
+	grid-column: 1 span;
+
+	position: relative;
+}
+
+.menor {
+	grid-column: 1 span;
+	grid-row: 1 span;
+
+	overflow: hidden;
+
+	height: 100%;
+
+	position: relative;
+}
+
+.primeiro {
+	background: #01737f;
+}
+.segundo {
+	background: #031356;
+	display: flex;
+	flex-direction: row-reverse;
+}
+.maior img,
+.menor img {
+	height: 100%;
+	width: 100%;
+
+	object-fit: cover;
+}
+.menor img {
+	width: 35%;
+}
+.over-image {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+
+	height: 45%;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: end;
+
+	gap: 12px;
+
+	background: linear-gradient(
+		180deg,
+		rgba(255, 255, 255, 0) -84.5%,
+		#0c0a0a 117.36%
+	);
+	padding: 24px;
+}
+.over-image-menor {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	width: 65%;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: end;
+
+	gap: 12px;
+
+	padding: 24px;
+}
+.over-image span,
+.over-image-menor span {
+	color: #fff;
+	font-size: 24px;
+}
+.over-image p,
+.over-image-menor p {
+	color: #d9d9d9;
+	font-size: 16px;
+}
+.segundo .over-image-menor:last-child {
+	left: 0;
+}
 
 /* media query */
 @media only screen and (max-width: 1220px) {
 	header,
-	#quem-somos {
+	#container-quem-somos {
 		padding: 0 20px;
 	}
 	header img {
 		height: 50px;
 	}
-	#quem-somos h1 {
+	#container-quem-somos h1 {
 		font-size: 40px;
 		grid-column: 5 span;
 	}
+	h2 {
+		font-size: 30px;
+	}
 
-	#quem-somos div {
+	#container-quem-somos div {
 		grid-column: 5 span;
 	}
 
@@ -279,6 +394,17 @@ main {
 	#side-bar,
 	.line-side-bar {
 		display: block;
+	}
+	#servicos {
+		padding: 0 20px;
+	}
+	.container-conheca:first-child {
+		grid-column: 2 span;
+	}
+
+	.container-conheca:nth-child(2),
+	.container-conheca:nth-child(3) {
+		grid-column: 2 span;
 	}
 }
 @media only screen and (max-width: 1000px) {
