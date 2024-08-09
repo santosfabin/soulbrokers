@@ -195,7 +195,7 @@ main {
 	width: 48px;
 	height: 48px;
 
-	background: #ffffff12;
+	background: #ffffff33;
 
 	border-radius: 50%;
 
@@ -222,7 +222,7 @@ main {
 	display: block;
 }
 
-.container {
+#container {
 	display: flex;
 	gap: 24px;
 
@@ -274,12 +274,12 @@ h3 {
 #conheca {
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
-	max-height: 500px;
 
 	gap: 20px;
 }
 .container-conheca {
-	max-height: 500px;
+	height: 500px;
+	flex: 0 0 auto;
 }
 .maior {
 	grid-row: 2 span;
@@ -332,7 +332,7 @@ h3 {
 
 	background: linear-gradient(
 		180deg,
-		rgba(255, 255, 255, 0) -84.5%,
+		rgba(255, 255, 255, 0) -15.5%,
 		#0c0a0a 117.36%
 	);
 	padding: 24px;
@@ -359,12 +359,110 @@ h3 {
 .over-image p,
 .over-image-menor p {
 	color: #d9d9d9;
-	font-size: 16px;
+	font-size: 12px;
 }
 .segundo .over-image-menor:last-child {
 	left: 0;
 }
 
+#novidades {
+	width: 100%;
+
+	background: #0c0a0a;
+
+	position: relative;
+
+	overflow: hidden;
+
+	display: flex;
+	flex-direction: column;
+	gap: 60px;
+
+	padding: 80px 0;
+}
+
+#nov-container {
+	display: flex;
+	gap: 24px;
+
+	overflow-x: scroll;
+	scroll-snap-type: x mandatory;
+	-ms-overflow-style: none;
+	scrollbar-width: none;
+
+	padding-left: 80px;
+}
+.card {
+	flex: none;
+
+	width: 361px;
+
+	display: flex;
+	flex-direction: column;
+
+	gap: 24px;
+
+	border: 1px solid #4f4a4aaa;
+
+	padding: 24px;
+}
+.card img {
+	height: 227px;
+	user-select: none;
+}
+
+
+.card article {
+	display: flex;
+	flex-direction: column;
+
+	gap: 24px;
+}
+
+.card span {
+	color: #fff;
+
+	font-size: 24px;
+
+	width: 100%;
+
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.card p {
+	color: #96a0b5;
+	font-size: 16px;
+}
+#novidades .title-white {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+
+	gap: 12px;
+
+	padding: 0 80px;
+	padding-bottom: 0;
+}
+.title-white div {
+	max-width: 700px;
+}
+.title-white h2 {
+	color: #fff;
+}
+
+.title-white p {
+	color: #96a0b5;
+}
+.nov-scroll-x {
+	z-index: 2;
+
+	display: flex;
+	justify-content: end;
+
+	gap: 24px;
+}
 /* media query */
 @media only screen and (max-width: 1220px) {
 	header,
@@ -405,6 +503,17 @@ h3 {
 	.container-conheca:nth-child(2),
 	.container-conheca:nth-child(3) {
 		grid-column: 2 span;
+	}
+	#novidades {
+		gap: 0;
+	}
+
+	#novidades .title-white {
+		padding: 20px;
+		padding-top: 80px;
+	}
+	#nov-container {
+		padding-left: 20px;
 	}
 }
 @media only screen and (max-width: 1000px) {
