@@ -26,8 +26,6 @@ a {
 	color: #101010;
 }
 
-
-
 header {
 	width: 100%;
 
@@ -715,7 +713,15 @@ footer .title-white p {
 }
 
 /* media query */
+@media only screen and (min-width: 1300px) {
+	#nav-contet {
+		width: 100% !important;
+	}
+}
 @media only screen and (max-width: 1300px) {
+	#quem-somos {
+		padding-top: 30px;
+	}
 	header,
 	#container-quem-somos {
 		padding: 0 20px;
@@ -745,10 +751,8 @@ footer .title-white p {
 		height: 100px;
 		z-index: 50;
 
-		
 		padding-top: 61px;
 		margin: 0;
-
 	}
 	#nav-contet {
 		z-index: 50;
@@ -768,8 +772,6 @@ footer .title-white p {
 		align-items: center;
 
 		gap: 44px;
-
-		
 	}
 
 	#header-ul {
