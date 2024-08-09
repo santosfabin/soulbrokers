@@ -1,6 +1,16 @@
 const scrollItems = [
-	{ containerId: "container", leftButtonId: "scroll-left", rightButtonId: "scroll-right", scrollAmount: 550 },
-	{ containerId: "nov-container", leftButtonId: "nov-scroll-left", rightButtonId: "nov-scroll-right", scrollAmount: 385 },
+	{
+		containerId: "container",
+		leftButtonId: "scroll-left",
+		rightButtonId: "scroll-right",
+		scrollAmount: 550
+	},
+	{
+		containerId: "nov-container",
+		leftButtonId: "nov-scroll-left",
+		rightButtonId: "nov-scroll-right",
+		scrollAmount: 385
+	}
 ];
 
 scrollItems.forEach(item => {
@@ -41,4 +51,10 @@ document.addEventListener("DOMContentLoaded", function () {
 			}
 		});
 	});
+});
+
+/*  */
+document.getElementById("side-bar").addEventListener("click", function () {
+	var div = document.getElementById("nav-contet");
+	div.style.width = div.style.width === "100%" ? "0" : "100%";
 });
